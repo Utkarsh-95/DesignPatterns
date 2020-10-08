@@ -1,4 +1,4 @@
-package com.journaldev.java.legacy;
+package com.utkarsh.java.legacy;
 
 public class EmailService {
 

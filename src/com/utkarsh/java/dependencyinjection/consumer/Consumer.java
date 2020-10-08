@@ -1,4 +1,4 @@
-package com.journaldev.java.dependencyinjection.consumer;
+package com.utkarsh.java.dependencyinjection.consumer;
 
 public interface Consumer {
 

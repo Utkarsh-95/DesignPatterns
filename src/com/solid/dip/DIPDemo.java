@@ -70,7 +70,7 @@ class Relationships implements RelationshipBrowser {
 class Research {
 
     public Research(Relationships relationships) {
-        // high-level: find all of john's children
+        // high-level: find all of parent's children
         List<Triplet<Person, Relationship, Person>> relations = relationships.getRelations();
         relations.stream()
                 .filter(x -> x.getValue0().name.equals("Utkarsh")

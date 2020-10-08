@@ -1,6 +1,6 @@
-package com.journaldev.java.dependencyinjection.consumer;
+package com.utkarsh.java.dependencyinjection.consumer;
 
-import com.journaldev.java.dependencyinjection.service.MessageService;
+import com.utkarsh.java.dependencyinjection.service.MessageService;
 
 public class MyDIApplication implements Consumer {
 

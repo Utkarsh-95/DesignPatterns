@@ -1,4 +1,4 @@
-package com.journaldev.java.dependencyinjection.service;
+package com.utkarsh.java.dependencyinjection.service;
 
 public class EmailServiceImpl implements MessageService {
 
