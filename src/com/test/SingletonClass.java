@@ -17,6 +17,7 @@ import java.util.logging.Logger;
 public class SingletonClass {
 
     private static SingletonClass sSoleInstance;
+//    private static SingletonClass sSoleInstance = null;//Eagerly initialization
 
     //private constructor.
     private SingletonClass() {
@@ -27,6 +28,7 @@ public class SingletonClass {
         }
     }
 
+    //LazyLoading by method instance
     public static SingletonClass getInstance() {//thread safe
 //        if (sSoleInstance == null) { //if there is no instance available... create new one
 //            sSoleInstance = new SingletonClass();
@@ -35,7 +37,8 @@ public class SingletonClass {
         //Double check locking pattern
         if (sSoleInstance == null) { //Check for the first time
 
-            synchronized (SingletonClass.class) {   //Check for the second time.
+            //synchronized block
+            synchronized (SingletonClass.class) {  //Check for the second time.
                 //if there is no instance available... create new one
                 if (sSoleInstance == null) {
                     sSoleInstance = new SingletonClass();
@@ -57,7 +60,7 @@ public class SingletonClass {
             cons.setAccessible(true);
             instance3 = cons.newInstance();
             System.out.println(instance1);
-            System.out.println(instance3+"--Reflection");
+            System.out.println(instance3 + "--Reflection");
         } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException | InstantiationException e) {
             e.printStackTrace();
         }
